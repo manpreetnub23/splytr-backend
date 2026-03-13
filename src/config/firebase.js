@@ -1,0 +1,6 @@
+import admin from "firebase-admin";
+import serviceAccount from "./firebaseServiceKey.json" with { type: "json" };
+
+admin.initializeApp({
+	credential: admin.credential.cert(serviceAccount),
+});
